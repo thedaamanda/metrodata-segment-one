@@ -23,6 +23,7 @@ public class VGrade
         Console.WriteLine("===================================");
         Console.WriteLine("Data Grade");
         Console.WriteLine("===================================");
+
         Console.WriteLine("Id: " + grade.Id);
         Console.WriteLine("Name: " + grade.Name);
         Console.WriteLine("Description: " + grade.Description);

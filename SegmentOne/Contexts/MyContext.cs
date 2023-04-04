@@ -1,57 +1,59 @@
 ﻿using System.Data.SqlClient;
 
-namespace SegmentOne.Contexts
+namespace SegmentOne.Contexts;
+
+public class MyContext
 {
-	public class MyContext
-	{
-        private static SqlConnection connection;
-        private string connectionString;
+    private static string _serverName = "localhost";
+    private static string _databaseName = "db_dts_segment1";
+    private static string _userName = "sa";
+    private static string _password = "Passw@rd";
+    private static SqlConnection connection;
+    private string connectionString;
 
-		public MyContext(string serverName, string databaseName, string userName, string password)
-		{
-            // Memasukkan data koneksi ke dalam string
-            connectionString = "Server=" + serverName + ";Database=" + databaseName + ";User Id=" + userName + ";Password=" + password + "; Trusted_Connection=False; MultipleActiveResultSets=true";
+    public MyContext()
+    {
+        // Memasukkan data koneksi ke dalam string
+        connectionString = "Server=" + _serverName + ";Database=" + _databaseName + ";User Id=" + _userName + ";Password=" + _password + "; Trusted_Connection=False; MultipleActiveResultSets=true";
 
-            // Menginisialisasi SqlConnection object
-            connection = new SqlConnection(connectionString);
-		}
+        // Menginisialisasi SqlConnection object
+        connection = new SqlConnection(connectionString);
+    }
 
-        public bool OpenConnection()
+    public bool OpenConnection()
+    {
+        try
         {
-            try
-            {
-                // Membuka koneksi ke database
-                connection.Open();
-                Console.WriteLine("Connection Open ! ");
-                return true;
-            }
-            catch (Exception ex)
-            {
-                // Melakukan penanganan error jika gagal membuka koneksi
-                Console.WriteLine("Error: " + ex.Message);
-                return false;
-            }
+            // Membuka koneksi ke database
+            connection.Open();
+            return true;
         }
-
-        public void CloseConnection()
+        catch (Exception ex)
         {
-            // Menutup koneksi ke database
-            connection.Close();
+            // Melakukan penanganan error jika gagal membuka koneksi
+            Console.WriteLine("Error: " + ex.Message);
+            return false;
         }
+    }
 
-        public SqlConnection GetConnection()
+    public void CloseConnection()
+    {
+        // Menutup koneksi ke database
+        connection.Close();
+    }
+
+    public SqlConnection GetConnection()
+    {
+        try
         {
-            try
-            {
-                // Mengembalikan SqlConnection object
-                return connection;
-            }
-            catch (Exception ex)
-            {
-                // Melakukan penanganan error jika gagal mengembalikan SqlConnection object
-                Console.WriteLine("Error: " + ex.Message);
-                return null;
-            }
+            // Mengembalikan SqlConnection object
+            return connection;
         }
-	}
+        catch (Exception ex)
+        {
+            // Melakukan penanganan error jika gagal mengembalikan SqlConnection object
+            Console.WriteLine("Error: " + ex.Message);
+            return null;
+        }
+    }
 }

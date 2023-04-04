@@ -25,7 +25,7 @@ public class VClassroom
         Console.WriteLine("Data Classroom");
         Console.WriteLine("===================================");
 
-            Console.WriteLine("Id: " + classroom.Id);
+        Console.WriteLine("Id: " + classroom.Id);
         Console.WriteLine("Code: " + classroom.Code);
         Console.WriteLine("Year: " + classroom.Year);
         Console.WriteLine("Grade ID: " + classroom.GradeId);

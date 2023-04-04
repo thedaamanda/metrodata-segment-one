@@ -7,4 +7,5 @@ public class Course
     public string Description { get; set; }
     public int GradeId { get; set; }
     public int TeacherId { get; set; }
+    public ICollection<ClassroomCourse> ClassroomCourses { get; set; }
 }

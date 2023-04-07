@@ -2,7 +2,7 @@ using SegmentOne.Models;
 
 namespace SegmentOne.Views;
 
-public class VClassroom
+public class VClassroom : VBase
 {
     public void GetAll(List<Classroom> classrooms)
     {
@@ -29,20 +29,5 @@ public class VClassroom
         Console.WriteLine("Code: " + classroom.Code);
         Console.WriteLine("Year: " + classroom.Year);
         Console.WriteLine("Grade ID: " + classroom.GradeId);
-    }
-
-    public void Success(string message)
-    {
-        Console.WriteLine($"Data has been {message}");
-    }
-
-    public void Failure(string message)
-    {
-        Console.WriteLine($"Data has not been {message}");
-    }
-
-    public void DataNotFound()
-    {
-        Console.WriteLine("Data Not Found!");
     }
 }

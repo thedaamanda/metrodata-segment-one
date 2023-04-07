@@ -1,4 +1,45 @@
 ﻿<Properties StartupConfiguration="{B4208A45-4EBA-4219-A4CE-F1E7CFBD6F87}|Default">
-  <MonoDevelop.Ide.ItemProperties.SegmentOne FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.SegmentOne PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SegmentOne/Views/VClassroomCourse.cs">
+    <Files>
+      <File FileName="SegmentOne/Contexts/MyContext.cs" Line="34" Column="14" />
+      <File FileName="SegmentOne/Program.cs" Line="6" Column="46" />
+      <File FileName="SegmentOne/Commands/Command.cs" Line="37" Column="46" />
+      <File FileName="SegmentOne/Commands/CourseCommand.cs" Line="83" Column="64" />
+      <File FileName="SegmentOne/Models/Course.cs" Line="10" Column="71" />
+      <File FileName="SegmentOne/Repositories/Interfaces/ICourseRepository.cs" Line="10" Column="24" />
+      <File FileName="SegmentOne/Repositories/CourseRepository.cs" Line="195" Column="34" />
+      <File FileName="SegmentOne/Views/VCourse.cs" Line="49" Column="2" />
+      <File FileName="SegmentOne/Controllers/CourseController.cs" Line="80" Column="23" />
+      <File FileName="SegmentOne/Controllers/ClassroomCourseController.cs" Line="1" Column="1" />
+      <File FileName="SegmentOne/Repositories/ClassroomCourseRepository.cs" Line="1" Column="1" />
+      <File FileName="SegmentOne/Commands/ClassroomCourseCommand.cs" Line="41" Column="1" />
+      <File FileName="SegmentOne/Views/VClassroomCourse.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SegmentOne" expanded="True">
+            <Node name="SegmentOne" expanded="True">
+              <Node name="Commands" expanded="True" />
+              <Node name="Contexts" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Repositories" expanded="True">
+                <Node name="Interfaces" expanded="True" />
+                <Node name="TeacherRepository.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>

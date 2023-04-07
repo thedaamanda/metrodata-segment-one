@@ -2,7 +2,7 @@ using SegmentOne.Models;
 
 namespace SegmentOne.Views;
 
-public class VGrade
+public class VGrade : VBase
 {
     public void GetAll(List<Grade> grades)
     {
@@ -27,20 +27,5 @@ public class VGrade
         Console.WriteLine("Id: " + grade.Id);
         Console.WriteLine("Name: " + grade.Name);
         Console.WriteLine("Description: " + grade.Description);
-    }
-
-    public void Success(string message)
-    {
-        Console.WriteLine($"Data has been {message}");
-    }
-
-    public void Failure(string message)
-    {
-        Console.WriteLine($"Data has not been {message}");
-    }
-
-    public void DataNotFound()
-    {
-        Console.WriteLine("Data Not Found!");
     }
 }
